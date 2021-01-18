@@ -1,0 +1,75 @@
+html, body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    position: fixed;
+    background-color: antiquewhite;
+    height: 100%;
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin-left: 116px;
+}
+
+.sticky {
+    margin-left: 116px;
+    position: sticky;
+    top: 0;
+}
+
+.card-right {
+    right: 10%;
+    top: 150px;
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background-color: blanchedalmond;
+    box-shadow: 10px 10px 45px 5px black;
+    text-align: center;
+}
+
+.card-left {
+    left: 20%;
+    top: 150px;
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background-color: blanchedalmond;
+    box-shadow: 10px 10px 45px 5px black;
+    text-align: center;
+}
+
+.photo {
+    position: absolute;
+    border-radius: 50%;
+    left: -15px;
+    top: -15px;
+    overflow: hidden;
+    box-shadow: -6px -6px 14px 0px black;
+}
+
+.name {
+    font-weight: 900;
+    margin: 0;
+    padding-top: 7%;
+}
+
+.description {
+    font-style: italic;
+    margin: 0;
+}
+
+.text {
+    margin-left: 116px;
+}
+
