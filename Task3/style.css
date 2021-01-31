@@ -1,0 +1,158 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: white;
+    top: 0;
+    z-index: 999;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+}
+
+.logo {
+    margin: 17px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+li {
+    width: 100px;
+}
+
+.section {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.intro {
+    background-image: url("media/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.br-box {
+    border: 2px solid black;
+    font-size: 24px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.architects {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 767px) and (min-width: 375px) {
+    .intro {
+        background-position-x: center;
+        margin: 0;
+    }
+}
+
+h3 {
+    font-weight: bold;
+}
+
+.projects, .about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 767px) and (min-width: 375px) {
+    .projects, .about {
+        display: block;
+    }
+}
+
+.house {
+    display: flex;
+    margin-bottom: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.house:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.house-pic, .member-photo {
+    width: 250px;
+}
+
+.house-title {
+    position: absolute;
+    width: 120px;
+    height: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.member {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+@media screen and (max-width: 767px) and (min-width: 375px) {
+    .house, .member {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 375px) {
+    .house-pic, .member-photo {
+        width: 100%;
+    }
+}
+.member-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 7px 0;
+}
+
+.member-position {
+    color: lightslategrey;
+    margin-bottom: 7px;
+}
+
+.contact-box {
+    height: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 7px 7px 5px 0;
+}
+
+#username, #email, #subject, #comment {
+    border: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+.submit-button {
+    background-color: black;
+    margin: 5px;
+    color: white;
+}

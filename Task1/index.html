@@ -4,62 +4,115 @@
     <title>Merch!</title>
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,700|Varela+Round" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
-    <header>
-        <nav class="header-content">
-            <a href="#"><img class="logo clearfix" src="media/logo.jpg" alt="logo" /></a>
-            <ul class="menu clearfix">
-                <li class="menu-item"><a href="#">Top quotes</a></li>
-                <li class="menu-item"><a href="#">Art</a></li>
-                <li class="menu-item"><a href="#">Merch</a></li>
-            </ul>
-        </nav>
-    </header>
+<header class="header">
+    <nav class="header-content">
+        <a href="#"><img class="logo clearfix" src="media/logo.jpg" alt="logo" /></a>
+        <ul class="menu clearfix">
+            <li class="menu-item"><a href="#">Top quotes</a></li>
+            <li class="menu-item"><a href="#">Art</a></li>
+            <li class="menu-item"><a href="#">Merch</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <div class="welcome clearfix">
-        <button class="cta" type="button">Buy now!</button>
-    </div>
-
-    <h2 class="advantages-title">Advantages</h2>
-
-    <ul class="advantages">
-        <li class="goodies">
-            <h3>Blackjack</h3>
-        </li>
-
-        <li class="goodies">
-            <h3>Rum</h3>
-        </li>
-
-        <li class="goodies">
-            <h3>Girls</h3>
-        </li>
-    </ul>
-
-    <div class="design">
-        <div class="farnsworth">
-            <h3>Design</h3>
+<div class="content">
+    <section class="section welcome">
+        <h1>Welcome!</h1>
+        <div class="buttons">
+            <button class="cta" type="button">Buy now!</button>
+            <button class="cta" type="button">Drink now!</button>
         </div>
-        <div class="farnsworth">
-            <img src="media/Farnsworth.png" alt="Professor Farnsworth with beakers" />
-        </div>
-    </div>
+    </section>
 
-    <div class="deliver">
-        <div class="planet-express">
-            <img src="media/Planet_express.png" width="200" height="200" alt="Planet Express logo" />
+    <section class="section narrow-section advantages">
+        <h2 class="advantages-title">Advantages</h2>
+        <ul class="advantages-items">
+            <li class="goodie">
+                <span>Blackjack</span>
+            </li>
+
+            <li class="goodie">
+                <span>Rum</span>
+            </li>
+
+            <li class="goodie">
+                <span>Girls</span>
+            </li>
+        </ul>
+    </section>
+
+    <section class="section narrow-section order-process">
+        <div class="design">
+            <div class="farnsworth">
+                <h3>Design</h3>
+            </div>
+            <div class="farnsworth">
+                <img src="media/Farnsworth.png" alt="Professor Farnsworth with beakers" />
+            </div>
         </div>
-        <div class="planet-express">
-            <h3>Deliver</h3>
+
+        <div class="deliver">
+            <div class="planet-express">
+                <img src="media/Planet_express.png" width="200" height="200" alt="Planet Express logo" />
+            </div>
+            <div class="planet-express">
+                <h3>Deliver</h3>
+            </div>
         </div>
-    </div>
-    <footer>
-        <div class="foot">
+    </section>
+
+    <section class="stuff">
+        <section class="boxes">
+            <div class="translate"></div>
+            <div class="scale">
+                <div class="sale">
+                    <span>Sale</span>
+                </div>
+            </div>
+            <div class="skew"></div>
+            <div class="rotate"></div>
+        </section>
+
+        <section class="boxes">
+            <div class="translate1"></div>
+            <div class="scale1">
+                <div class="sale">
+                    <span>Sale</span>
+                </div>
+            </div>
+            <div class="skew1"></div>
+            <div class="rotate1"></div>
+        </section>
+
+        <section class="boxes">
+            <div class="box"></div>
+            <div class="box1"></div>
+            <div class="circle"></div>
+        </section>
+
+        <section class="boxes">
+            <div class="load-bar"></div>
+        </section>
+
+        <section class="boxes">
+            <div class="rect-square"></div>
+        </section>
+
+        <section class="boxes">
+            <div class="edge-to-edge"></div>
+        </section>
+    </section>
+
+    <footer class="section footer">
+        <div class="footer-content">
             <img class="rights" src="media/rights.png" width="100" height="100" alt="all rights recerved" />
             <h3 class="zoidberg clearfix">Zoidberg Co. Ltd.</h3>
         </div>
     </footer>
+</div>
 </body>
 </html>

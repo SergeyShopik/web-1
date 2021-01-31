@@ -1,30 +1,46 @@
-html, body {
-    margin: 0px;
-    padding: 0px;
-}
-
-.body {
+body {
+    margin: 0;
+    padding: 0;
     font-family: 'Oswald', sans-serif;
 }
 
-header {
+.section {
+    margin: 0;
+    padding: 0 15px;
+}
+
+.header {
     box-shadow: 0 0 40px 0 rgba(0,0,0,0.75);
-    background-color: white;
-    border-bottom: 1px solid #466995;
     position: fixed;
-    width: 100%;
-    z-index: 10;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #466995;
+    padding-right: 15px;
 }
 
 .logo {
-    float: left;
     max-width: 100px;
-    opacity: 0.8;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 767px) and (min-width: 375px) {
+    .logo {
+        max-width: 60px;
+    }
 }
 
 .menu {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
 }
 
 .menu-item {
@@ -32,7 +48,7 @@ header {
     font-size: 16px;
     font-weight: 300;
     text-transform: uppercase;
-    width: 80px;
+    width: 80px;    
 }
 
 .menu-item a {
@@ -42,6 +58,47 @@ header {
 .menu-item a:hover {
     color: #DBE9EE;
 }
+
+.welcome {
+    background-image: url("media/shut-up-and-take-my-money.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 767px) and (min-width: 375px) {
+    .welcome {
+        background-size: contain;
+        background-position-x: center;
+    }
+}
+
+.buttons {
+    display: flex;
+}
+
+.cta {
+    outline: none;
+    cursor: pointer;
+    font-size: 24px;
+    text-transform: uppercase;
+    min-width: 255px;
+    border: 2px solid black;
+    margin: 35px 13px;
+    padding: 15px;
+    color: black;
+    text-align: center;
+}
+
+/*@media screen and (max-width: 767px) and (min-width: 375px) {
+    .buttons {
+        flex-direction: column;
+    }
+}*/
 
 h1 {
     color: #466995;
@@ -66,57 +123,35 @@ h3 {
     padding: 30px;
 }
 
-h4 {
-    color: #466995;
-    font-size: 18px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-align: center;
-    text-transform: uppercase
+.narrow-section {
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
-p {
-    color: #333;
-    font-family: 'Varela Round', sans-serif;
-    font-size: 18px;
-}
-
-.welcome {
-    background-image: url("media/shut-up-and-take-my-money.jpg");
-    background-repeat: no-repeat;
-    box-sizing: border-box;
-    text-align: center;
-    width: 100%;
-    height: 500px;
-}
-
-.cta {
-    position: absolute;
-    top: 270px;
-    left: 48%;
+.advantages {
+    margin-top: -60px;
+    background-color: aquamarine;
 }
 
 .advantages-title {
     text-align: center;
 }
 
-.advantages {
-    background-color: aquamarine;
+.advantages-items {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding: 0 20px;
+    list-style-type: none;
 }
 
-.goodies {
+.goodie {
     border: 1px solid #466995;
+    border-radius: 10px;
     margin: 20px;
-    width: 100%;
-    color: aquamarine;
     font-size: 16px;
     font-weight: 300;
     text-transform: uppercase;
+    background-color: darkorange;
 }
 
 .design {
@@ -143,17 +178,210 @@ footer {
 }
 
 .rights {
-    float: left;
     max-width: 100px;
     padding: 10px;
 }
 
-.zoidberg {
-    float: right;
+.stuff {
+    display: flex;
+    flex-direction: column;
+    margin: 60px;
 }
 
-.clearfix::after {
-    content: '';
-    clear: both;
-    display: block;
+.boxes {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
 }
+
+.sale {
+    position: absolute;
+    top: -5px;
+    left: 40px;
+    background-color: greenyellow;
+    width: 50px;
+    height: 25px;
+    border-top-right-radius: 7px;
+}
+
+.sale::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 10px solid greenyellow;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    bottom: -10px;
+    left: 0;
+}
+
+.scale::before {
+    position: absolute;
+    content: '';
+    top: -5px;
+    left: 35px;
+    width: 5px;
+    height: 5px;
+    background-color: darkslategray;
+    border-top-left-radius: 7px;
+    border-left: 1px solid greenyellow;
+    border-top: 1px solid greenyellow;
+}
+
+.translate {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transform: translate(20px, 20px);
+    filter: blur(5px);
+}
+
+.translate1 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transform: translate(20px, 20px);
+    filter: brightness(0.5);
+}
+
+.scale {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transform: scale(2, 2);
+}
+
+.skew {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transform: skew(30deg, 20deg);
+}
+
+.rotate {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transform: rotate(45deg);
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.box1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border-top: 20px solid red;
+    border-right: 20px solid yellow;
+    border-bottom: 20px solid green;
+    border-left: 20px solid purple;
+    border-radius: 50%;
+
+    animation-iteration-count: infinite;
+    animation-name: loader;
+    animation-duration: 4000ms;
+    animation-timing-function: linear;
+}
+
+@keyframes loader {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.load-bar {
+    width: 500px;
+    height: 50px;
+    background-color: grey;
+    border-radius: 25px;
+}
+
+.load-bar::after {
+    content: '';
+    width: 0;
+    height: 50px;
+    border-radius: 25px;
+    background-color: green;
+    display: block;
+
+    animation-name: load-bar;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes load-bar {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.rect-square {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+
+    animation-name: rect-square;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes rect-square {
+    from {
+        transform: translateX(0px);
+        height: 200px;
+    }
+
+    to {
+        transform: translateX(400px);
+        height: 100px;
+        background-color: blue;
+    }
+}
+
+.edge-to-edge {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    margin-left: -15%;
+
+    animation-name: edge-to-edge;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes edge-to-edge {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translate(1340px);
+    }
+}
+

@@ -1,0 +1,50 @@
+html body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    padding: 15px;
+}
+
+tr, td, th {
+    border: 1px solid black;
+}
+
+td {
+    width: 10%;
+}
+
+td:nth-child(2n+1) {
+    border: 2px solid red;
+}
+
+td:nth-child(2n) {
+    background-image: url("1.jpg");
+}
+
+.table-container {
+    position: relative;
+    overflow-x: scroll;
+}
+
+.table-container::after {
+    position: fixed;
+    content: '';
+    width: 10px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(84,84,84,0.2221931008731618) 77%, rgba(255,255,255,1) 100%);
+}
+
+.table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.body {
+    background-color: black;
+    color: white;
+}
